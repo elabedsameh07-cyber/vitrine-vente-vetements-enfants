@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Petit Monde, boutique de vêtements pour enfants.">
+    <title>Petit Monde | Vêtements pour enfants</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="entete">
+        <a class="logo" href="#accueil">Petit Monde<span> ♥</span></a>
+
+        <button class="menu-toggle" id="menu-toggle"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+                aria-controls="navigation">
+            ☰
+        </button>
+
+        <nav id="navigation" class="navigation"
+             aria-label="Navigation principale">
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="accueil" class="hero">
+            <div class="hero-texte">
+                <p class="surtitre">La mode des petits</p>
+                <h1>Des vêtements pour petits aventuriers</h1>
+                <p>
+                    Des tenues douces, confortables et colorées
+                    pour accompagner chaque moment de l'enfance.
+                </p>
+                <a href="#collections" class="bouton">
+                    Découvrir nos collections
+                </a>
+            </div>
+
+            <figure class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=85"
+                    alt="Enfants portant des vêtements confortables">
+            </figure>
+        </section>
+
+        <section id="collections" class="collections">
+            <header class="section-entete">
+                <p class="surtitre">Notre sélection</p>
+                <h2>Nos collections</h2>
+                <p>Des vêtements pensés pour chaque petit style.</p>
+            </header>
+
+            <div class="filtres" aria-label="Filtrer les vêtements">
+                <button class="filtre actif" data-categorie="tous">
+                    Tous
+                </button>
+                <button class="filtre" data-categorie="bebe">
+                    Bébés
+                </button>
+                <button class="filtre" data-categorie="fille">
+                    Filles
+                </button>
+                <button class="filtre" data-categorie="garcon">
+                    Garçons
+                </button>
+            </div>
+
+            <form id="recherche-form" class="recherche">
+                <label for="recherche">Rechercher un vêtement</label>
+                <input id="recherche" type="search"
+                       placeholder="Ex. : robe, pantalon, body">
+                <button type="submit" class="bouton">
+                    Rechercher
+                </button>
+            </form>
+
+            <p id="resultat-recherche" aria-live="polite"></p>
+
+            <div class="grille-produits" id="grille-produits">
+
+                <article class="produit" data-categorie="bebe"
+                         data-nom="body coton">
+                    <img
+                        src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=600&q=80"
+                        alt="Vêtement doux pour bébé">
+                    <div class="produit-info">
+                        <p class="categorie">Collection bébé</p>
+                        <h3>Body tout doux</h3>
+                        <p>Un essentiel confortable pour bébé.</p>
+                        <p class="prix">29,900 DT</p>
+                        <button class="bouton details"
+                                data-nom="Body tout doux"
+                                data-description="Un body doux et confortable pour bébé.">
+                            Voir les détails
+                        </button>
+                    </div>
+                </article>
+
+                <article class="produit" data-categorie="fille"
+                         data-nom="robe fleurie">
+                    <img
+                        src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=600&q=80"
+                        alt="Tenue enfant aux couleurs douces">
+                    <div class="produit-info">
+                        <p class="categorie">Collection fille</p>
+                        <h3>Robe fleurie</h3>
+                        <p>Une tenue légère pour les beaux jours.</p>
+                        <p class="prix">45,900 DT</p>
+                        <button class="bouton details"
+                                data-nom="Robe fleurie"
+                                data-description="Une robe légère pour les sorties et les fêtes.">
+                            Voir les détails
+                        </button>
+                    </div>
+                </article>
+
+                <article class="produit" data-categorie="garcon"
+                         data-nom="ensemble pantalon">
+                    <img
+                        src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=600&q=80"
+                        alt="Ensemble confortable pour enfant">
+                    <div class="produit-info">
+                        <p class="categorie">Collection garçon</p>
+                        <h3>Ensemble décontracté</h3>
+                        <p>Un look pratique pour tous les jours.</p>
+                        <p class="prix">59,900 DT</p>
+                        <button class="bouton details"
+                                data-nom="Ensemble décontracté"
+                                data-description="Un ensemble pratique pour jouer et sortir.">
+                            Voir les détails
+                        </button>
+                    </div>
+                </article>
+
+                <article class="produit" data-categorie="bebe"
+                         data-nom="pyjama bébé">
+                    <img
+                        src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=600&q=80"
+                        alt="Tenue douce pour les tout-petits">
+                    <div class="produit-info">
+                        <p class="categorie">Collection bébé</p>
+                        <h3>Pyjama câlin</h3>
+                        <p>Une tenue agréable pour les moments calmes.</p>
+                        <p class="prix">35,900 DT</p>
+                        <button class="bouton details"
+                                data-nom="Pyjama câlin"
+                                data-description="Un pyjama confortable pour les tout-petits.">
+                            Voir les détails
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <p id="aucun-produit" hidden>
+                Aucun vêtement ne correspond à votre recherche.
+            </p>
+
+            <dialog id="fenetre-details">
+                <button type="button" id="fermer-details"
+                        class="fermer" aria-label="Fermer">
+                    ×
+                </button>
+                <h2 id="details-titre"></h2>
+                <p id="details-description"></p>
+            </dialog>
+        </section>
+
+        <section id="apropos" class="apropos">
+            <div>
+                <p class="surtitre">Notre univers</p>
+                <h2>Grandir avec style et douceur</h2>
+                <p>
+                    Chez Petit Monde, nous aimons les vêtements
+                    pratiques, les couleurs joyeuses et le confort
+                    des enfants. Notre sélection accompagne les
+                    petits dans leurs aventures quotidiennes.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <header class="section-entete">
+                <p class="surtitre">Restons en contact</p>
+                <h2>Contactez-nous</h2>
+                <p>Une question sur nos collections ? Écrivez-nous.</p>
+            </header>
+
+            <form id="form-contact" class="form-contact">
+                <label for="nom">Nom complet</label>
+                <input type="text" id="nom" name="nom"
+                       autocomplete="name" required>
+
+                <label for="email">Adresse e-mail</label>
+                <input type="email" id="email" name="email"
+                       autocomplete="email" required>
+
+                <label for="message">Votre message</label>
+                <textarea id="message" name="message"
+                          rows="5" required></textarea>
+
+                <button type="submit" class="bouton">
+                    Envoyer le message
+                </button>
+
+                <p id="confirmation" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="pied-page">
+        <a class="logo" href="#accueil">Petit Monde ♥</a>
+        <p>La mode des enfants, tout en douceur.</p>
+        <p>© <span id="annee"></span> Petit Monde. Tous droits réservés.</p>
+        <a href="#accueil">Retour en haut ↑</a>
+    </footer>
+</body>
+</html>
